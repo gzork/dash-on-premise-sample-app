@@ -4,4 +4,5 @@ dash-renderer==0.10.0
 dash-core-components
 dash-html-components
 plotly
+pyodbc
 gunicorn
