@@ -16,5 +16,7 @@ The expected end result here is the same as [Dash On-Premise Sample app](https:/
 
 3- Add JAVA_HOME ENV variable: (e.g. `export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64`)
 
+4- Install pip requirements: `dash-on-premise-sample-jnius-app$ pip install -r requirements.txt`
+
 #### Dokku Deployment Instructions
 
