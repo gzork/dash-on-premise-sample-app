@@ -5,3 +5,4 @@ dash-core-components==0.22.1
 dash-html-components==0.9.0
 plotly
 gunicorn
+jnius

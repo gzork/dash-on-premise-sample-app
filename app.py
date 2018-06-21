@@ -8,6 +8,18 @@ import config
 from auth import auth
 from utils import StaticUrlPath
 
+from jnius import autoclass
+
+Stack = autoclass('java.util.Stack')
+stack = Stack()
+
+stack.push('JAVAAA!')
+stack.push('is')
+stack.push('This')
+
+words = []
+for i in range(3):
+    words.append(stack.pop())
 
 app = dash.Dash(
     __name__,
@@ -21,7 +33,7 @@ server = app.server  # Expose the server variable for deployments
 # Standard Dash app code below
 app.layout = html.Div(className='container', children=[
 
-    Header('Sample App'),
+    Header(' '.join(words)),
 
     Row([
         Column(width=4, children=[
@@ -34,7 +46,7 @@ app.layout = html.Div(className='container', children=[
         Column(width=8, children=[
             dcc.Graph(id='graph')
         ])
-    ])
+    ]),
 ])
 
 @app.callback(Output('graph', 'figure'),
