@@ -20,3 +20,13 @@ The expected end result here is the same as [Dash On-Premise Sample app](https:/
 
 #### Dokku Deployment Instructions
 
+1- Create the app
+
+2- Add the following environment variable:
+
+```shell
+# where APP_NAME = your app name
+dokku config:set APP_NAME JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
+
+3- Deploy the app.
